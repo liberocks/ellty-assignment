@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.primary-checkbox input:checked+div {
+  @apply bg-[#2469F6];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.primary-checkbox input:hover+div {
+  @apply outline outline-4 outline-blue-200;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.primary-checkbox input:checked:disabled+div {
+  @apply bg-[#5087F8];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.primary-checkbox input:hover:disabled+div {
+  @apply outline-0;
+}
+
+.primary-checkbox input:checked+div svg {
+  @apply block;
+
+}
+
+.secondary-checkbox input:checked+div {
+  @apply bg-white border-2 border-gray-300;
+}
+
+.secondary-checkbox input:hover+div {
+  @apply outline outline-4 outline-blue-200;
+}
+
+.secondary-checkbox input:hover:disabled+div {
+  @apply outline-0;
+}
+
+.secondary-checkbox input:checked+div svg {
+  @apply block;
 }
