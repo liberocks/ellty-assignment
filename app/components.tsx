@@ -39,6 +39,7 @@ export const ChecklistCard: FC<ChecklistCardProps> = (props) => {
       <div className="flex flex-col -mt-2">
         {pageStatus.map((page) => (
           <CheckboxItem
+            key={page.id}
             id={`${page.id}`}
             name={page.name}
             checked={page.status}

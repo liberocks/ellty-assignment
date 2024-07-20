@@ -1,4 +1,3 @@
-
 import { ChecklistCard } from "./components"
 
 export default function Home() {
